@@ -1,0 +1,301 @@
+/* General Styling & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* Warna latar belakang halaman */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50; /* Warna hijau untuk link */
+}
+
+a:hover {
+    color: #388E3C; /* Hijau lebih gelap saat hover */
+}
+
+/* Header */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #333;
+}
+
+.main-header .logo img {
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.main-nav ul li a.active::after,
+.main-nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #e8f5e9; /* Warna hijau muda */
+    /* padding: 80px 0; */
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    color: #2E7D32; /* Hijau gelap */
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* App Cards Section */
+.app-cards-section {
+    padding: 80px 0;
+    background-color: #f4f7f6;
+}
+
+.app-cards-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #2E7D32;
+    font-weight: 700;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.app-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.app-card .icon-wrapper {
+    /* Hapus properti font-size dan color karena sekarang menggunakan gambar */
+    margin-bottom: 20px;
+    height: 60px; /* Menjaga tinggi wrapper agar konsisten */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-card .icon-wrapper img {
+    max-width: 100%; /* Agar gambar tidak melebihi lebar wrapper */
+    max-height: 100%; /* Agar gambar tidak melebihi tinggi wrapper */
+    border-radius: 10px; /* Opsional: untuk sudut membulat pada logo */
+    object-fit: contain; /* Memastikan gambar pas tanpa terpotong atau terdistorsi */
+}
+
+.app-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.app-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Agar paragraf mengisi ruang yang tersedia */
+}
+
+.app-card .access-link {
+    display: inline-block;
+    color: #4CAF50;
+    font-weight: 600;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-card .access-link i {
+    margin-left: 8px;
+    transition: margin-left 0.2s ease;
+}
+
+.app-card:hover .access-link i {
+    margin-left: 12px;
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-footer .footer-links {
+    margin-top: 15px;
+}
+
+.main-footer .footer-links a {
+    color: #c9c9c9;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header .logo {
+        margin-bottom: 15px;
+    }
+
+    .main-nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap; /* Izinkan menu wrap */
+        justify-content: center;
+    }
+
+    .main-nav ul li {
+        margin: 0 10px 10px 10px;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .app-cards-section {
+        padding: 60px 0;
+    }
+
+    .app-cards-section h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .app-grid {
+        grid-template-columns: 1fr; /* Satu kolom di mobile */
+    }
+
+    .app-card {
+        padding: 25px;
+    }
+
+    .main-footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-footer .footer-links a {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+}
